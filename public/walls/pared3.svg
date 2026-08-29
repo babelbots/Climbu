@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="p3-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141816" />
+      <stop offset="100%" stop-color="#0c0e0d" />
+    </linearGradient>
+
+    <!-- Grey Panel Texture -->
+    <linearGradient id="p3-grey-panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8E979E" />
+      <stop offset="50%" stop-color="#7B848B" />
+      <stop offset="100%" stop-color="#6F777E" />
+    </linearGradient>
+
+    <!-- Top Overhang Crimson Beam -->
+    <linearGradient id="p3-red-roof" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A52835" />
+      <stop offset="50%" stop-color="#8E1F2A" />
+      <stop offset="100%" stop-color="#70121B" />
+    </linearGradient>
+
+    <!-- Crimson Zigzag Volume -->
+    <linearGradient id="p3-red-zigzag-1" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9C202C" />
+      <stop offset="50%" stop-color="#B83240" />
+      <stop offset="100%" stop-color="#7E1520" />
+    </linearGradient>
+    <linearGradient id="p3-red-zigzag-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8A1823" />
+      <stop offset="100%" stop-color="#640E16" />
+    </linearGradient>
+
+    <!-- Green Overhang and Wings -->
+    <linearGradient id="p3-green-vol" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3FA12C" />
+      <stop offset="100%" stop-color="#246E16" />
+    </linearGradient>
+
+    <!-- Green Crash Pad Floor -->
+    <linearGradient id="p3-green-mat" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#26663B" />
+      <stop offset="50%" stop-color="#1E542F" />
+      <stop offset="100%" stop-color="#153D22" />
+    </linearGradient>
+
+    <!-- Hold Colors -->
+    <linearGradient id="p3-yellow-hold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFDD33" />
+      <stop offset="100%" stop-color="#D9A800" />
+    </linearGradient>
+    <linearGradient id="p3-green-hold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#70E000" />
+      <stop offset="100%" stop-color="#38B000" />
+    </linearGradient>
+    <linearGradient id="p3-blue-hold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="p3-pink-hold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F472B6" />
+      <stop offset="100%" stop-color="#DB2777" />
+    </linearGradient>
+
+    <!-- Chalk Brush Filter -->
+    <filter id="p3-chalk-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Frame Background -->
+  <rect width="1600" height="800" fill="url(#p3-bg)" />
+
+  <!-- TOP CRIMSON OVERHANG ROOF BEAM (FULL WIDTH) -->
+  <rect x="0" y="35" width="1600" height="175" fill="url(#p3-red-roof)" stroke="#5E0F17" stroke-width="4" />
+  <line x1="0" y1="35" x2="1600" y2="35" stroke="#FFFFFF" stroke-width="2" opacity="0.3" />
+
+  <!-- UPPER LEFT GREEN OVERHANG PANEL -->
+  <polygon points="40,210 560,210 490,360 40,360" fill="url(#p3-green-vol)" stroke="#226615" stroke-width="3" />
+
+  <!-- ================= MAIN GREY WALL BACKGROUND PANELS ================= -->
+  <polygon points="560,210 1560,210 1400,730 40,730 40,360 490,360" fill="url(#p3-grey-panel)" />
+
+  <!-- Left & Right Red Border Columns -->
+  <polygon points="0,210 45,210 45,730 0,730" fill="#751C25" />
+  <polygon points="1440,210 1600,210 1600,730 1440,730" fill="#751C25" />
+
+  <!-- Lower-Right Green Wing Panel -->
+  <polygon points="1220,440 1440,440 1440,730 1220,730" fill="url(#p3-green-vol)" />
+
+  <!-- Chalk Dust Smudges on Grey Panels -->
+  <ellipse cx="600" cy="480" rx="260" ry="180" fill="#FFFFFF" opacity="0.14" filter="url(#p3-chalk-glow)" />
+  <ellipse cx="1050" cy="460" rx="240" ry="160" fill="#FFFFFF" opacity="0.12" filter="url(#p3-chalk-glow)" />
+  <ellipse cx="800" cy="120" rx="400" ry="60" fill="#FFFFFF" opacity="0.16" filter="url(#p3-chalk-glow)" />
+
+  <!-- ================= CONTINUOUS CRIMSON RED ZIGZAG (Z) VOLUME ================= -->
+  <!-- Diagonal Band from Lower-Left traversing Up-Right -->
+  <!-- Lower diagonal segment -->
+  <polygon points="440,640 760,280 880,310 560,670" fill="url(#p3-red-zigzag-1)" stroke="#5E0F17" stroke-width="3" />
+  <!-- Upper connecting diagonal segment -->
+  <polygon points="760,280 1340,480 1360,450 880,310" fill="url(#p3-red-zigzag-2)" stroke="#5E0F17" stroke-width="3" />
+  <polygon points="880,310 1340,480 1180,670 760,480" fill="url(#p3-red-zigzag-1)" stroke="#5E0F17" stroke-width="3" />
+
+  <!-- Ridge Highlight on Zigzag Volume -->
+  <line x1="440" y1="640" x2="760" y2="280" stroke="#FFA3AD" stroke-width="3" opacity="0.4" />
+  <line x1="760" y1="280" x2="1340" y2="480" stroke="#FFA3AD" stroke-width="3" opacity="0.4" />
+
+  <!-- Bolt/T-Nut Hole Matrix Grid -->
+  <g fill="#2A2F33" opacity="0.45">
+    <circle cx="280" cy="460" r="3" /><circle cx="360" cy="460" r="3" /><circle cx="440" cy="460" r="3" />
+    <circle cx="280" cy="540" r="3" /><circle cx="360" cy="540" r="3" /><circle cx="440" cy="540" r="3" />
+    <circle cx="280" cy="620" r="3" /><circle cx="360" cy="620" r="3" /><circle cx="440" cy="620" r="3" />
+    <circle cx="680" cy="400" r="3" /><circle cx="760" cy="400" r="3" /><circle cx="840" cy="400" r="3" /><circle cx="920" cy="400" r="3" />
+    <circle cx="680" cy="480" r="3" /><circle cx="760" cy="480" r="3" /><circle cx="840" cy="480" r="3" /><circle cx="920" cy="480" r="3" />
+    <circle cx="680" cy="560" r="3" /><circle cx="760" cy="560" r="3" /><circle cx="840" cy="560" r="3" /><circle cx="920" cy="560" r="3" />
+    <circle cx="680" cy="640" r="3" /><circle cx="760" cy="640" r="3" /><circle cx="840" cy="640" r="3" /><circle cx="920" cy="640" r="3" />
+    <circle cx="1020" cy="340" r="3" /><circle cx="1100" cy="340" r="3" /><circle cx="1180" cy="340" r="3" />
+    <circle cx="1020" cy="420" r="3" /><circle cx="1100" cy="420" r="3" /><circle cx="1180" cy="420" r="3" />
+    <circle cx="1020" cy="500" r="3" /><circle cx="1100" cy="500" r="3" /><circle cx="1180" cy="500" r="3" />
+    <circle cx="1020" cy="580" r="3" /><circle cx="1100" cy="580" r="3" /><circle cx="1180" cy="580" r="3" />
+  </g>
+
+  <!-- ================= TOP CRIMSON BEAM HOLDS (EXACT MATCH TO PHOTO) ================= -->
+  <path d="M 160,110 Q 185,90 220,115 Q 195,145 160,110 Z" fill="url(#p3-green-hold)" />
+  <ellipse cx="290" cy="85" rx="30" ry="18" fill="url(#p3-yellow-hold)" />
+  <circle cx="210" cy="180" r="14" fill="url(#p3-yellow-hold)" />
+  <circle cx="300" cy="180" r="16" fill="url(#p3-yellow-hold)" />
+  <path d="M 440,85 Q 465,65 500,95 Q 470,125 440,85 Z" fill="url(#p3-green-hold)" />
+  <ellipse cx="445" cy="170" rx="14" ry="18" fill="url(#p3-yellow-hold)" />
+  <ellipse cx="580" cy="115" rx="20" ry="30" fill="url(#p3-yellow-hold)" />
+  <circle cx="700" cy="115" r="16" fill="url(#p3-yellow-hold)" />
+  <circle cx="950" cy="75" r="32" fill="url(#p3-yellow-hold)" />
+  <ellipse cx="945" cy="180" rx="18" ry="14" fill="url(#p3-yellow-hold)" />
+  <path d="M 1100,75 Q 1130,55 1135,115 Q 1105,120 1100,75 Z" fill="url(#p3-yellow-hold)" />
+  <path d="M 1140,165 Q 1175,160 1205,185 Q 1160,205 1140,165 Z" fill="url(#p3-yellow-hold)" />
+  <ellipse cx="1225" cy="90" rx="25" ry="20" fill="url(#p3-pink-hold)" />
+  <circle cx="1320" cy="105" r="15" fill="url(#p3-yellow-hold)" />
+  <path d="M 1500,60 Q 1545,55 1575,85 Q 1530,105 1500,60 Z" fill="url(#p3-yellow-hold)" />
+  <circle cx="1565" cy="130" r="28" fill="url(#p3-blue-hold)" />
+
+  <!-- ================= HOLDS ON ZIGZAG VOLUME & GREY WALL ================= -->
+  <!-- Holds along the Red Zigzag -->
+  <circle cx="720" cy="340" r="16" fill="url(#p3-yellow-hold)" />
+  <circle cx="640" cy="430" r="16" fill="url(#p3-blue-hold)" />
+  <circle cx="705" cy="460" r="16" fill="url(#p3-yellow-hold)" />
+  <ellipse cx="570" cy="510" rx="24" ry="12" fill="url(#p3-yellow-hold)" />
+  <circle cx="610" cy="570" r="14" fill="url(#p3-yellow-hold)" />
+  <ellipse cx="485" cy="620" rx="18" ry="14" fill="url(#p3-yellow-hold)" />
+  <circle cx="910" cy="360" r="16" fill="url(#p3-yellow-hold)" />
+  <circle cx="1060" cy="470" r="15" fill="url(#p3-yellow-hold)" />
+
+  <!-- Holds on Grey Panels -->
+  <ellipse cx="200" cy="320" rx="22" ry="16" fill="url(#p3-yellow-hold)" />
+  <circle cx="300" cy="320" r="18" fill="url(#p3-yellow-hold)" />
+  <circle cx="415" cy="305" r="14" fill="url(#p3-yellow-hold)" />
+  <circle cx="410" cy="430" r="15" fill="url(#p3-yellow-hold)" />
+  <circle cx="370" cy="510" r="16" fill="url(#p3-yellow-hold)" />
+  <circle cx="560" cy="400" r="16" fill="url(#p3-green-hold)" />
+  <circle cx="780" cy="495" r="16" fill="url(#p3-yellow-hold)" />
+  <circle cx="820" cy="370" r="14" fill="#3D454A" />
+  <circle cx="850" cy="580" r="15" fill="url(#p3-blue-hold)" />
+  <circle cx="930" cy="540" r="15" fill="url(#p3-yellow-hold)" />
+  <circle cx="960" cy="650" r="14" fill="#3D454A" />
+  <circle cx="1040" cy="640" r="16" fill="url(#p3-blue-hold)" />
+  <circle cx="1120" cy="650" r="15" fill="url(#p3-yellow-hold)" />
+
+  <!-- Right Side Upper Panel Holds -->
+  <ellipse cx="1270" cy="300" rx="26" ry="18" fill="url(#p3-yellow-hold)" />
+  <circle cx="1310" cy="380" r="22" fill="url(#p3-yellow-hold)" />
+  <circle cx="1380" cy="350" r="16" fill="url(#p3-blue-hold)" />
+  <ellipse cx="1340" cy="480" rx="20" ry="16" fill="url(#p3-green-hold)" />
+  <circle cx="1400" cy="580" r="18" fill="url(#p3-yellow-hold)" />
+
+  <!-- ================= GREEN CRASH PAD FLOOR ================= -->
+  <polygon points="0,730 1600,730 1600,800 0,800" fill="url(#p3-green-mat)" stroke="#11331B" stroke-width="4" />
+  <line x1="0" y1="740" x2="1600" y2="740" stroke="#3DA35A" stroke-width="3" opacity="0.6" />
+</svg>

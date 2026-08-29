@@ -1,0 +1,237 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 800" width="100%" height="100%">
+  <defs>
+    <!-- Patterns and Gradients -->
+    <linearGradient id="p1-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141816" />
+      <stop offset="100%" stop-color="#0c0e0d" />
+    </linearGradient>
+
+    <!-- Grey Panel Texture -->
+    <linearGradient id="p1-grey-panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8E979E" />
+      <stop offset="50%" stop-color="#7B848B" />
+      <stop offset="100%" stop-color="#6F777E" />
+    </linearGradient>
+
+    <!-- Campus Grey Panel -->
+    <linearGradient id="p1-campus-panel" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A5ACB3" />
+      <stop offset="50%" stop-color="#B8BEC4" />
+      <stop offset="100%" stop-color="#9CA3AA" />
+    </linearGradient>
+
+    <!-- Green Volume Gradient -->
+    <linearGradient id="p1-green-vol" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4CB838" />
+      <stop offset="50%" stop-color="#3FA12C" />
+      <stop offset="100%" stop-color="#2D7A1E" />
+    </linearGradient>
+
+    <!-- Red Beam Trim -->
+    <linearGradient id="p1-red-trim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A8202E" />
+      <stop offset="50%" stop-color="#8C1723" />
+      <stop offset="100%" stop-color="#6E101A" />
+    </linearGradient>
+
+    <!-- Green Mat -->
+    <linearGradient id="p1-green-mat" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#26663B" />
+      <stop offset="50%" stop-color="#1E542F" />
+      <stop offset="100%" stop-color="#153D22" />
+    </linearGradient>
+
+    <!-- Sloper Ball Gradient -->
+    <radialGradient id="p1-yellow-ball" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFF066" />
+      <stop offset="40%" stop-color="#E5BE14" />
+      <stop offset="100%" stop-color="#8A6B00" />
+    </radialGradient>
+
+    <!-- Dual Texture Yellow -->
+    <linearGradient id="p1-yellow-hold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFDD33" />
+      <stop offset="100%" stop-color="#D9A800" />
+    </linearGradient>
+
+    <linearGradient id="p1-purple-hold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A37ACC" />
+      <stop offset="100%" stop-color="#5E3B85" />
+    </linearGradient>
+
+    <linearGradient id="p1-blue-hold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#58A8F5" />
+      <stop offset="100%" stop-color="#1F5FA8" />
+    </linearGradient>
+
+    <linearGradient id="p1-pink-hold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCA5C9" />
+      <stop offset="100%" stop-color="#C75485" />
+    </linearGradient>
+
+    <!-- Chalk Brush Filter -->
+    <filter id="chalk-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background / Ambient Frame -->
+  <rect width="1600" height="800" fill="url(#p1-bg)" />
+
+  <!-- Ceiling Top Beam -->
+  <rect x="0" y="0" width="1600" height="60" fill="#203028" />
+  <rect x="0" y="55" width="1600" height="10" fill="#991B24" />
+
+  <!-- LEFT ROOF SECTION -->
+  <polygon points="0,65 550,65 570,300 170,300 0,300" fill="#5F6E68" />
+  <polygon points="0,300 170,300 130,730 0,730" fill="url(#p1-green-vol)" />
+  <polygon points="0,65 170,300 170,730 0,730" fill="none" stroke="#991B24" stroke-width="8" />
+
+  <!-- Left Side Red Border Column -->
+  <polygon points="0,150 160,300 140,730 0,730" fill="url(#p1-red-trim)" />
+
+  <!-- MAIN LOWER WALL PANELS (Grey T-nut panels) -->
+  <!-- Left Panel -->
+  <polygon points="175,305 600,305 620,730 145,730" fill="url(#p1-grey-panel)" />
+  <!-- Center Panel -->
+  <polygon points="620,490 980,490 945,730 635,730" fill="url(#p1-grey-panel)" />
+  <!-- Right Panel -->
+  <polygon points="985,490 1260,490 1220,730 950,730" fill="url(#p1-grey-panel)" />
+
+  <!-- Vertical Red Structural Dividers -->
+  <polygon points="605,490 625,490 640,730 620,730" fill="url(#p1-red-trim)" />
+  <polygon points="965,490 985,490 955,730 935,730" fill="url(#p1-red-trim)" />
+
+  <!-- RIGHT WALL PANEL & OVERHANG -->
+  <polygon points="1260,360 1600,200 1600,730 1220,730" fill="url(#p1-green-vol)" />
+  <polygon points="1380,440 1600,440 1600,730 1380,730" fill="url(#p1-red-trim)" />
+
+  <!-- UPPER RIGHT ROOF PANEL -->
+  <polygon points="1090,200 1600,200 1600,360 1090,360" fill="url(#p1-red-trim)" />
+
+  <!-- ================= MIDDLE STEPPED GREEN VOLUME ================= -->
+  <!-- Left Green Box Volume -->
+  <polygon points="590,350 1020,350 1020,480 590,480" fill="url(#p1-green-vol)" stroke="#226615" stroke-width="4" />
+  <polygon points="590,350 1020,350 1020,370 590,370" fill="#60D44A" />
+
+  <!-- Right Green Box Volume -->
+  <polygon points="1025,355 1450,355 1450,490 1025,490" fill="url(#p1-green-vol)" stroke="#226615" stroke-width="4" />
+  <polygon points="1025,355 1450,355 1450,375 1025,375" fill="#60D44A" />
+
+  <!-- Red Underside Trim of Green Volume -->
+  <rect x="590" y="475" width="860" height="15" fill="#8A141F" />
+
+  <!-- ================= UPPER CAMPUS BOARD & HANGBOARDS ================= -->
+  <!-- Top Center Hanging Campus Beam Box -->
+  <polygon points="550,65 1090,65 1090,305 550,305" fill="url(#p1-campus-panel)" stroke="#991B24" stroke-width="10" />
+  <polygon points="550,305 1090,305 1070,350 570,350" fill="url(#p1-red-trim)" />
+
+  <!-- Top Right Campus Extension Panel -->
+  <polygon points="1090,80 1600,80 1600,205 1090,205" fill="url(#p1-campus-panel)" stroke="#991B24" stroke-width="8" />
+
+  <!-- Chalk dust smudges on Campus & Lower Panels -->
+  <ellipse cx="780" cy="200" rx="200" ry="60" fill="#FFFFFF" opacity="0.12" filter="url(#chalk-glow)" />
+  <ellipse cx="380" cy="500" rx="140" ry="120" fill="#FFFFFF" opacity="0.10" filter="url(#chalk-glow)" />
+  <ellipse cx="780" cy="620" rx="120" ry="80" fill="#FFFFFF" opacity="0.08" filter="url(#chalk-glow)" />
+  <ellipse cx="1100" cy="600" rx="100" ry="70" fill="#FFFFFF" opacity="0.08" filter="url(#chalk-glow)" />
+
+  <!-- Bolt/T-Nut Hole Matrix Grid on Panels -->
+  <g fill="#2A2F33" opacity="0.45">
+    <!-- Campus panel holes -->
+    <circle cx="610" cy="110" r="3" /><circle cx="680" cy="110" r="3" /><circle cx="750" cy="110" r="3" /><circle cx="820" cy="110" r="3" /><circle cx="890" cy="110" r="3" /><circle cx="960" cy="110" r="3" /><circle cx="1030" cy="110" r="3" />
+    <circle cx="610" cy="170" r="3" /><circle cx="680" cy="170" r="3" /><circle cx="750" cy="170" r="3" /><circle cx="820" cy="170" r="3" /><circle cx="890" cy="170" r="3" /><circle cx="960" cy="170" r="3" /><circle cx="1030" cy="170" r="3" />
+    <circle cx="610" cy="230" r="3" /><circle cx="680" cy="230" r="3" /><circle cx="750" cy="230" r="3" /><circle cx="820" cy="230" r="3" /><circle cx="890" cy="230" r="3" /><circle cx="960" cy="230" r="3" /><circle cx="1030" cy="230" r="3" />
+    <!-- Lower panel holes -->
+    <circle cx="260" cy="380" r="3" /><circle cx="340" cy="380" r="3" /><circle cx="420" cy="380" r="3" /><circle cx="500" cy="380" r="3" />
+    <circle cx="260" cy="460" r="3" /><circle cx="340" cy="460" r="3" /><circle cx="420" cy="460" r="3" /><circle cx="500" cy="460" r="3" />
+    <circle cx="260" cy="540" r="3" /><circle cx="340" cy="540" r="3" /><circle cx="420" cy="540" r="3" /><circle cx="500" cy="540" r="3" />
+    <circle cx="260" cy="620" r="3" /><circle cx="340" cy="620" r="3" /><circle cx="420" cy="620" r="3" /><circle cx="500" cy="620" r="3" />
+    <circle cx="260" cy="690" r="3" /><circle cx="340" cy="690" r="3" /><circle cx="420" cy="690" r="3" /><circle cx="500" cy="690" r="3" />
+    <circle cx="680" cy="560" r="3" /><circle cx="760" cy="560" r="3" /><circle cx="840" cy="560" r="3" /><circle cx="900" cy="560" r="3" />
+    <circle cx="680" cy="640" r="3" /><circle cx="760" cy="640" r="3" /><circle cx="840" cy="640" r="3" /><circle cx="900" cy="640" r="3" />
+    <circle cx="1040" cy="560" r="3" /><circle cx="1120" cy="560" r="3" /><circle cx="1200" cy="560" r="3" />
+    <circle cx="1040" cy="640" r="3" /><circle cx="1120" cy="640" r="3" /><circle cx="1200" cy="640" r="3" />
+  </g>
+
+  <!-- ================= CLIMBING HOLDS ON CAMPUS BOARD ================= -->
+  <!-- Top row holds -->
+  <ellipse cx="640" cy="100" rx="14" ry="18" fill="url(#p1-blue-hold)" />
+  <path d="M 730,95 Q 755,80 770,105 Q 750,135 730,115 Z" fill="url(#p1-yellow-hold)" />
+  <path d="M 915,100 Q 940,85 960,115 Q 940,140 915,120 Z" fill="#636E72" />
+  <!-- Middle row campus pinch blocks & slopers -->
+  <rect x="565" y="150" width="28" height="65" rx="14" fill="url(#p1-pink-hold)" />
+  <rect x="680" y="160" width="26" height="68" rx="13" fill="url(#p1-blue-hold)" />
+  <circle cx="755" cy="215" r="18" fill="#5A656B" />
+  <rect x="850" y="200" width="22" height="55" rx="11" fill="url(#p1-blue-hold)" />
+  <rect x="955" y="195" width="28" height="60" rx="14" fill="url(#p1-purple-hold)" />
+  <!-- Bottom campus rungs / yellow edge jugs -->
+  <rect x="560" y="245" width="50" height="22" rx="10" fill="url(#p1-yellow-hold)" />
+  <rect x="675" y="248" width="52" height="24" rx="10" fill="url(#p1-yellow-hold)" />
+  <rect x="780" y="252" width="48" height="18" rx="8" fill="#6B777D" />
+  <rect x="895" y="250" width="46" height="20" rx="9" fill="url(#p1-yellow-hold)" />
+  <rect x="995" y="252" width="44" height="20" rx="9" fill="url(#p1-yellow-hold)" />
+
+  <!-- Upper Right Campus Holds -->
+  <circle cx="1185" cy="165" r="16" fill="url(#p1-yellow-hold)" />
+  <path d="M 1225,120 Q 1250,115 1250,165 Q 1220,175 1225,120 Z" fill="url(#p1-yellow-hold)" />
+  <circle cx="1290" cy="168" r="18" fill="url(#p1-yellow-hold)" />
+  <rect x="1360" y="165" width="45" height="30" rx="12" fill="url(#p1-yellow-hold)" />
+  <rect x="1455" y="165" width="45" height="30" rx="12" fill="url(#p1-yellow-hold)" />
+  <path d="M 1550,110 Q 1585,115 1585,150 Q 1550,155 1550,110 Z" fill="url(#p1-yellow-hold)" />
+
+  <!-- ================= GREEN VOLUME SPHERICAL SLOPERS & RINGS ================= -->
+  <!-- Spherical yellow ball slopers on green shelf -->
+  <circle cx="920" cy="455" r="22" fill="url(#p1-yellow-ball)" filter="drop-shadow(0px 6px 8px rgba(0,0,0,0.5))" />
+  <circle cx="1000" cy="455" r="20" fill="url(#p1-yellow-ball)" filter="drop-shadow(0px 6px 8px rgba(0,0,0,0.5))" />
+  <ellipse cx="835" cy="445" rx="16" ry="14" fill="#D49A00" />
+  <!-- Donut Rings on Right Green Shelf -->
+  <circle cx="1120" cy="385" r="26" fill="url(#p1-yellow-ball)" />
+  <circle cx="1120" cy="385" r="12" fill="#2E7A24" />
+  <polygon points="1190,370 1230,370 1220,400 1195,400" fill="url(#p1-blue-hold)" />
+  <circle cx="1278" cy="390" r="26" fill="url(#p1-yellow-ball)" />
+  <circle cx="1278" cy="390" r="12" fill="#2E7A24" />
+  <polygon points="1340,370 1375,370 1370,405 1345,405" fill="url(#p1-blue-hold)" />
+
+  <!-- ================= LOWER WALL CLIMBING HOLDS (REAL GYM HOLD PATTERN) ================= -->
+  <!-- Left Panel Holds -->
+  <ellipse cx="340" cy="115" rx="28" ry="24" fill="url(#p1-yellow-hold)" />
+  <circle cx="370" cy="415" r="14" fill="url(#p1-yellow-hold)" />
+  <ellipse cx="430" cy="415" r="12" fill="url(#p1-yellow-hold)" />
+  <circle cx="515" cy="415" r="14" fill="url(#p1-yellow-hold)" />
+  <rect x="235" y="440" width="30" height="15" rx="7" fill="url(#p1-yellow-hold)" />
+  <circle cx="335" cy="505" r="16" fill="url(#p1-purple-hold)" />
+  <ellipse cx="480" cy="500" rx="20" ry="14" fill="#4B6358" />
+  <circle cx="560" cy="510" r="15" fill="url(#p1-yellow-hold)" />
+  <path d="M 290,530 Q 325,520 330,550 Q 295,565 290,530 Z" fill="url(#p1-yellow-hold)" />
+  <circle cx="420" cy="650" r="16" fill="url(#p1-purple-hold)" />
+  <ellipse cx="500" cy="640" r="16" rx="18" ry="12" fill="url(#p1-yellow-hold)" />
+  <rect x="330" y="680" width="35" height="18" rx="8" fill="url(#p1-yellow-hold)" />
+  <circle cx="440" cy="690" r="15" fill="url(#p1-purple-hold)" />
+
+  <!-- Center Lower Panel Holds -->
+  <circle cx="675" cy="540" r="15" fill="#3D454A" />
+  <ellipse cx="745" cy="610" rx="18" ry="14" fill="#61564C" />
+  <circle cx="810" cy="610" r="14" fill="#3A4045" />
+  <circle cx="875" cy="570" r="15" fill="url(#p1-yellow-hold)" />
+  <ellipse cx="680" cy="695" rx="16" ry="12" fill="url(#p1-blue-hold)" />
+  <circle cx="745" cy="710" r="12" fill="#4D555C" />
+
+  <!-- Right Lower Panel Holds -->
+  <circle cx="1050" cy="580" r="14" fill="url(#p1-blue-hold)" />
+  <circle cx="1080" cy="650" r="13" fill="url(#p1-blue-hold)" />
+  <ellipse cx="1180" cy="540" rx="14" ry="18" fill="url(#p1-yellow-hold)" />
+  <circle cx="1170" cy="625" r="14" fill="#4B5359" />
+
+  <!-- Left & Right Boundary holds on columns -->
+  <circle cx="60" cy="270" r="18" fill="url(#p1-yellow-hold)" />
+  <ellipse cx="120" cy="380" rx="18" ry="12" fill="url(#p1-yellow-hold)" />
+  <ellipse cx="18" cy="435" rx="16" ry="12" fill="url(#p1-blue-hold)" />
+  <circle cx="15" cy="520" r="16" fill="url(#p1-yellow-hold)" />
+  <circle cx="200" cy="640" r="18" fill="url(#p1-yellow-hold)" />
+  <circle cx="1420" cy="500" r="18" fill="url(#p1-yellow-hold)" />
+
+  <!-- ================= GREEN MATTRESS / CRASH PAD FLOOR ================= -->
+  <polygon points="0,730 1600,730 1600,800 0,800" fill="url(#p1-green-mat)" stroke="#11331B" stroke-width="4" />
+  <line x1="0" y1="740" x2="1600" y2="740" stroke="#3DA35A" stroke-width="3" opacity="0.6" />
+</svg>

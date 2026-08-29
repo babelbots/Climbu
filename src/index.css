@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-main: #F7F6F2;
+    --bg-card: #FFFFFF;
+    --bg-surface: #EFEDE7;
+    --bg-surface-subtle: #F4F2EC;
+    --text-primary: #1C1D1A;
+    --text-secondary: #5C5B56;
+    --text-muted: #87857E;
+    --border-color: #DCD9D1;
+    --border-subtle: #E8E5DF;
+    
+    /* Primary Accent */
+    --primary: #E8C96A;
+    --primary-hover: #DFBF5E;
+    --primary-light: #FFF4D1;
+    --primary-text: #1C1D1A;
+    --primary-dark: #7A6000;
+    
+    /* Category Soft Colors (Fontainebleau Levels) */
+    --level-principiante: #9FC78F;
+    --level-principiante-text: #1C1D1A;
+    --level-principiante-bg: #EAF4E5;
+    
+    --level-intermedio: #E8C96A;
+    --level-intermedio-text: #1C1D1A;
+    --level-intermedio-bg: #FCF4D7;
+    
+    --level-avanzado: #87A9D8;
+    --level-avanzado-text: #1B3F70;
+    --level-avanzado-bg: #E5EFFB;
+    
+    --level-experto: #D98278;
+    --level-experto-text: #661D15;
+    --level-experto-bg: #FCE8E6;
+    
+    --level-pro: #3C3E3B;
+    --level-pro-text: #FFFFFF;
+    --level-pro-bg: #E1E3DF;
+    
+    --level-elite: #FFFFFF;
+    --level-elite-text: #1C1D1A;
+    --level-elite-bg: #F8F7F3;
+    
+    /* Markers (Salida: Verde, Presa: Amarillo, Bonus: Morado, Top: Rojo) */
+    --marker-start: #22C55E;
+    --marker-hold: #EAB308;
+    --marker-bonus: #A855F7;
+    --marker-top: #EF4444;
+  }
+
+  .dark {
+    --bg-main: #141514;
+    --bg-card: #1F201E;
+    --bg-surface: #282927;
+    --bg-surface-subtle: #222321;
+    --text-primary: #F4F2EC;
+    --text-secondary: #B0AEA7;
+    --text-muted: #7E7C75;
+    --border-color: #383A36;
+    --border-subtle: #2C2E2A;
+    
+    /* Primary Accent */
+    --primary: #E8C96A;
+    --primary-hover: #F2D57D;
+    --primary-light: #332B13;
+    --primary-text: #1C1D1A;
+    --primary-dark: #FFE79E;
+    
+    /* Category Soft Colors */
+    --level-principiante: #8DB47D;
+    --level-principiante-text: #1B3213;
+    --level-principiante-bg: #22301D;
+    
+    --level-intermedio: #D8B756;
+    --level-intermedio-text: #1C1D1A;
+    --level-intermedio-bg: #332A13;
+    
+    --level-avanzado: #7697C5;
+    --level-avanzado-text: #CCE1FC;
+    --level-avanzado-bg: #1B293C;
+    
+    --level-experto: #C76F64;
+    --level-experto-text: #FAD0CB;
+    --level-experto-bg: #381B18;
+    
+    --level-pro: #353634;
+    --level-pro-text: #F0EEE9;
+    --level-pro-bg: #252624;
+    
+    --level-elite: #FFFFFF;
+    --level-elite-text: #1C1D1A;
+    --level-elite-bg: #333532;
+    
+    /* Markers */
+    --marker-start: #4ADE80;
+    --marker-hold: #FACC15;
+    --marker-bonus: #C084FC;
+    --marker-top: #F87171;
+  }
+
+  body {
+    font-family: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+  }
+}
+
+/* Custom scrollbar suppression for horizontal carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Clean Minimalism tactile button */
+.btn-primary-tactile {
+  background-color: var(--primary);
+  color: #292927;
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary-tactile:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 4px 12px rgba(232, 201, 106, 0.3);
+}
+
+.btn-primary-tactile:active {
+  transform: translateY(1px);
+}
+
+/* Soft card shadow */
+.card-soft-shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+}
+
+.dark .card-soft-shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Safe area support for iOS / mobile PWA */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}

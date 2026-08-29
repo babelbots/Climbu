@@ -1,0 +1,84 @@
+{
+  "entities": {
+    "admins": {
+      "description": "Lista privada y segura de correos electrónicos con permisos de administrador / equipador",
+      "fields": {
+        "email": { "type": "string", "description": "Correo electrónico del administrador" },
+        "role": { "type": "string", "description": "admin o equipador" },
+        "createdAt": { "type": "string", "description": "Fecha de registro" }
+      }
+    },
+    "users": {
+      "description": "Perfiles de usuarios escaladores",
+      "fields": {
+        "uid": { "type": "string", "description": "UID de Firebase Auth" },
+        "email": { "type": "string", "description": "Email del usuario" },
+        "name": { "type": "string", "description": "Nombre del usuario" },
+        "avatarUrl": { "type": "string", "description": "URL de foto de perfil" },
+        "role": { "type": "string", "description": "user o admin" },
+        "createdAt": { "type": "string", "description": "Fecha de creación" }
+      }
+    },
+    "walls": {
+      "description": "Sectores y muros del rocódromo de Alhama",
+      "fields": {
+        "id": { "type": "string", "description": "ID del sector" },
+        "name": { "type": "string", "description": "Nombre del sector" },
+        "angle": { "type": "string", "description": "Inclinación o características" },
+        "imageUrl": { "type": "string", "description": "URL o base64 de la imagen del sector" },
+        "description": { "type": "string", "description": "Descripción del muro" }
+      }
+    },
+    "blocks": {
+      "description": "Bloques y vías de escalada oficiales",
+      "fields": {
+        "id": { "type": "string", "description": "ID del bloque" },
+        "name": { "type": "string", "description": "Nombre de la vía" },
+        "grade": { "type": "string", "description": "Grado Fontainebleau" },
+        "level": { "type": "string", "description": "Nivel (principiante, intermedio, avanzado, experto, pro, elite)" },
+        "wallId": { "type": "string", "description": "ID del sector" },
+        "wallName": { "type": "string", "description": "Nombre del sector" },
+        "imageUrl": { "type": "string", "description": "Imagen con o sin marcas" },
+        "markers": { "type": "array", "description": "Lista de marcas de presas (inicio, pies, manos, top)" },
+        "setter": { "type": "string", "description": "Equipador" },
+        "setDate": { "type": "string", "description": "Fecha de equipación" },
+        "status": { "type": "string", "description": "active o retired" },
+        "holdsColor": { "type": "string", "description": "Color de las presas" },
+        "tags": { "type": "array", "description": "Etiquetas de estilo" },
+        "description": { "type": "string", "description": "Descripción o beta" }
+      }
+    },
+    "proposals": {
+      "description": "Propuestas de vías creadas por los usuarios",
+      "fields": {
+        "id": { "type": "string", "description": "ID de la propuesta" },
+        "userId": { "type": "string", "description": "ID del autor" },
+        "userName": { "type": "string", "description": "Nombre del autor" },
+        "userAvatar": { "type": "string", "description": "Avatar del autor" },
+        "wallId": { "type": "string", "description": "Sector donde se propone" },
+        "wallName": { "type": "string", "description": "Nombre del sector" },
+        "name": { "type": "string", "description": "Nombre propuesto" },
+        "grade": { "type": "string", "description": "Grado propuesto" },
+        "markers": { "type": "array", "description": "Presas marcadas" },
+        "notes": { "type": "string", "description": "Notas / beta" },
+        "status": { "type": "string", "description": "pending, approved, rejected" },
+        "createdAt": { "type": "string", "description": "Fecha de envío" }
+      }
+    },
+    "userProgress": {
+      "description": "Subcolección de progreso de encadenes y proyectos por usuario: users/{userId}/progress/{blockId}",
+      "fields": {
+        "blockId": { "type": "string", "description": "ID del bloque" },
+        "status": { "type": "string", "description": "untried, project, completed" },
+        "favorite": { "type": "boolean", "description": "Favorito" },
+        "attempts": { "type": "number", "description": "Número de pegues" },
+        "flash": { "type": "boolean", "description": "Encadenado al primer pegue" },
+        "completedAt": { "type": "string", "description": "Fecha de encadene" },
+        "isObsolete": { "type": "boolean", "description": "Si el bloque fue retirado" },
+        "blockName": { "type": "string", "description": "Snapshot del nombre del bloque" },
+        "grade": { "type": "string", "description": "Snapshot del grado" },
+        "wallName": { "type": "string", "description": "Snapshot del sector" }
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper to check if user is authenticated
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    // Helper to check if current user is an admin from admins collection or token email
+    function isAdmin() {
+      return isAuthenticated() && (
+        request.auth.token.email == 'victorb.belchi18720@gmail.com' ||
+        exists(/databases/$(database)/documents/admins/$(request.auth.token.email))
+      );
+    }
+
+    // Admins whitelist collection
+    match /admins/{email} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // User profiles
+    match /users/{userId} {
+      allow read: if true;
+      allow write: if isAuthenticated() && (request.auth.uid == userId || isAdmin());
+      
+      // User progress subcollection (encadenes, proyectos, favoritos)
+      match /progress/{blockId} {
+        allow read, write: if isAuthenticated() && (request.auth.uid == userId || isAdmin());
+      }
+    }
+
+    // Gym walls / sectors
+    match /walls/{wallId} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    // Boulder blocks
+    match /blocks/{blockId} {
+      allow read: if true;
+      allow write: if isAuthenticated();
+    }
+
+    // User proposals
+    match /proposals/{proposalId} {
+      allow read: if true;
+      allow create: if isAuthenticated();
+      allow update, delete: if isAuthenticated() && (
+        resource.data.userId == request.auth.uid || isAdmin()
+      );
+    }
+  }
+}
